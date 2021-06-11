@@ -61,7 +61,7 @@ class Game():
 @dataclass
 class Settings:
     max_player: int = 9
-    times: int = 600
+    times: int = 120
     custom_role_list: str = None
 
 @dataclass
