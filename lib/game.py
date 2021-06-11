@@ -3,7 +3,8 @@ from dataclasses import dataclass
 
 from lib.player import Players
 
-class Game():
+
+class Game:
 
     def __init__(self):
         self.players = Players()
@@ -58,11 +59,13 @@ class Game():
                 village_count += 1
         return village_count <= werewolf_count
 
+
 @dataclass
 class Settings:
     max_player: int = 9
     times: int = 120
     custom_role_list: str = None
+
 
 @dataclass
 class Channels:
@@ -70,7 +73,8 @@ class Channels:
     dead: discord.TextChannel = None
     audience: discord.TextChannel = None
     wolfs: discord.TextChannel = None
-        
+
+
 @dataclass
 class Roles:
     alive: discord.Role = None
