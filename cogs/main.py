@@ -201,11 +201,11 @@ class Main(commands.Cog):
             # 勝敗判定
             if game.is_werewolf_win():
                 await channels.alive.send('ゲーム終了｜人狼陣営の勝利です')
-                await ctx.channel.send(game.role_list)
+                await ctx.channel.send(game.role_table)
                 break
             if game.is_village_win():
                 await channels.alive.send('ゲーム終了｜市民陣営の勝利です')
-                await ctx.channel.send(game.role_list)
+                await ctx.channel.send(game.role_table)
                 break
 
             game.days += 1
