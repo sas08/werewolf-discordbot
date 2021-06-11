@@ -80,6 +80,10 @@ class Commands(commands.Cog):
     async def _co(self, ctx: SlashContext, role):
         playersMention = self.bot.game.roles.alive
         await ctx.send(f"{playersMention}\n{ctx.author.name}が自分の役職を明かしました\n役職： __**{role}**__")
+        for p in self.bot.game.players:
+            if p.id != ctx.author.id:
+                continue
+            await ctx.author.edit(nick=f'{p.name}｜{p.status}｜{role} CO')
 
 def setup(bot):
     bot.add_cog(Commands(bot))
