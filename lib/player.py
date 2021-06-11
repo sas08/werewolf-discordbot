@@ -1,6 +1,7 @@
 import discord
 
-class Player():
+
+class Player:
 
     def __init__(self, member: discord.Member):
         self.id = member.id
@@ -52,12 +53,13 @@ class Player():
     def die(self):
         self.is_dead = True
 
+
 class Players(list):
 
     @property
     def alives(self):
         return Players(p for p in self if not p.is_dead)
-    
+
     def get(self, player_id) -> Player:
         for p in self:
             if p.id == player_id:

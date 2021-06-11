@@ -4,6 +4,7 @@ from discord.ext import commands
 from ui.invite import Invite
 from ui.rolepanel import Rolepanel
 
+
 class Admin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -42,6 +43,7 @@ class Admin(commands.Cog):
             member = ctx.guild.get_member(player.id)
             await member.edit(nick=player.nick)
             await player.channel.delete()
+
 
 def setup(bot):
     bot.add_cog(Admin(bot))
