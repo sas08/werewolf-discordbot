@@ -1,9 +1,7 @@
-import discord
 from discord.ext import commands
 from discord_slash import cog_ext, SlashContext
 
-# guild_ids = [840795339723767838, 810011469381894174]
-guild_ids = [720566804094648330]
+guild_ids = [840795339723767838, 810011469381894174]
 
 
 class Commands(commands.Cog):
